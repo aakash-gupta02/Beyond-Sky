@@ -1,5 +1,6 @@
 import BackgroundLayer from "@/components/BackgroundLayer";
 import Hero from "@/components/Hero";
+import MissionAnalytics from "@/components/MissionAnalytics";
 import Navbar from "@/components/Navbar";
 import NewsGrid from "@/components/NewsGrid";
 import Image from "next/image";
@@ -109,6 +110,7 @@ export default function Home() {
   <Navbar />
   <Hero />
   <NewsGrid />
+  <MissionAnalytics />
 </div>
   );
 }
