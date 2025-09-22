@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from './Logo'
 
 const Navbar = () => {
   return (
@@ -10,7 +11,8 @@ const Navbar = () => {
           {/* <div className="w-8 h-8 rounded-full bg-white/10 border border-white/15 grid place-items-center">
             <span className="text-xs font-semibold tracking-tight">ON</span>
           </div> */}
-          <span className="text-lg font-medium tracking-tight">Beyond Sky!!</span>
+          {/* <span className="text-lg font-medium tracking-tight">Beyond Sky!!</span> */}
+          <Logo />
           <span className="hidden md:inline-flex text-xs px-2 py-1 rounded-full border border-cyan-400/25 text-cyan-300/90 bg-cyan-400/10">Live Feeds</span>
         </div>
 

@@ -14,7 +14,9 @@ const Logo = ({ size }) => {
                 width={size}
                 height={size}
             />
-            <span className="text-xl font-semibold tracking-tight">Beyond Sky!!</span>
+            {/* <span className="text-xl font-semibold tracking-tight">Beyond Sky!!</span> */}
+          <span className="text-lg font-medium tracking-tight">Beyond Sky!!</span>
+
         </div>
     )
 }

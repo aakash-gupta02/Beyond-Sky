@@ -14,7 +14,7 @@ const news = [
     },
     {
         category: 'Science',
-        image: 'https://images.unsplash.com/photo-1473929732560-0bf3633e9995?q=80&w=1600&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1611318285008-ff902cd59e5a?q=80&w=1173&auto=format&fit=crop',
         alt: 'Mars landscape',
         title: 'Perseverance rover stores new sample on Mars',
         description: 'The mission team confirmed successful caching of sedimentary rock core from Jezero Crater delta.',
