@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import { Rocket, Rss } from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -19,11 +20,11 @@ const Hero = () => {
                         </p>
                         <div className="mt-8 flex flex-col sm:flex-row gap-3">
                             <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black hover:bg-white/90 border border-white/10 transition-all">
-                                <i data-lucide="rocket" className="w-5 h-5"></i>
+                                <Rocket className="w-5 h-5" />
                                 Watch Live Launch
                             </button>
                             <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition-all">
-                                <i data-lucide="rss" className="w-5 h-5"></i>
+                                <Rss className="w-5 h-5" />
                                 Latest Headlines
                             </button>
                         </div>
