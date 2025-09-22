@@ -1,3 +1,4 @@
+import Apod from "@/components/Apod";
 import BackgroundLayer from "@/components/BackgroundLayer";
 import Hero from "@/components/Hero";
 import MissionAnalytics from "@/components/MissionAnalytics";
@@ -111,6 +112,7 @@ export default function Home() {
   <Hero />
   <NewsGrid />
   <MissionAnalytics />
+  <Apod />
 </div>
   );
 }
