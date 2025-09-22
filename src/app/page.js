@@ -1,3 +1,4 @@
+import BackgroundLayer from "@/components/BackgroundLayer";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
@@ -102,6 +103,7 @@ export default function Home() {
     // </div>
 
 <div className="min-h-screen bg-black text-white selection:bg-cyan-500/30 selection:text-white">
+  <BackgroundLayer />
   <Navbar />
 </div>
   );
