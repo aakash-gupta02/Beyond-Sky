@@ -1,5 +1,6 @@
 import React from 'react';
 import { Twitter, Github, Youtube } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
     return (
@@ -7,9 +8,10 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid md:grid-cols-5 gap-10">
                     <div className="md:col-span-2">
-                        <div className="flex items-center gap-3">
+                        <Logo />
+                        {/* <div className="flex items-center gap-1">
                             <span className="text-xl font-semibold tracking-tight">Beyond Sky!!</span>
-                        </div>
+                        </div> */}
                         <p className="text-white/60 mt-4 max-w-md">
                             Independent coverage of NASA and the global space sector. We synthesize verified updates, mission data, and imagery into a clear daily briefing.
                         </p>
