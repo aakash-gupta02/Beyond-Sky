@@ -1,5 +1,6 @@
 import Apod from "@/components/Apod";
 import BackgroundLayer from "@/components/BackgroundLayer";
+import CTA from "@/components/CTA";
 import Hero from "@/components/Hero";
 import MissionAnalytics from "@/components/MissionAnalytics";
 import Navbar from "@/components/Navbar";
@@ -113,6 +114,7 @@ export default function Home() {
   <NewsGrid />
   <MissionAnalytics />
   <Apod />
+  <CTA />
 </div>
   );
 }
