@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const Countdown = ({ net }) => {
+const Countdown = ({ net, small = false }) => {
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
@@ -27,12 +27,30 @@ const Countdown = ({ net }) => {
     return () => clearInterval(interval);
   }, [net]);
 
-  if (timeLeft.expired) return <span className="text-red-400">Launched</span>;
+  if (timeLeft.expired) {
+    return (
+      <div
+        className={`${small ? "text-lg" : "text-4xl"
+          } font-light tracking-tight text-red-400`}
+      >
+        Launched
+      </div>
+    );
+  }
+
+  // Format into T–DD:HH:MM:SS
+  // const format = `T-${timeLeft.days ?? 0}d:${timeLeft.hours ?? 0}h:${timeLeft.minutes ?? 0}m:${timeLeft.seconds ?? 0}s`;
+  //  const format = `T-${timeLeft.days ?? 0}d : ${timeLeft.hours ?? 0}h : ${timeLeft.minutes ?? 0}m : ${timeLeft.seconds ?? 0}s`;
+  const format = `T-${timeLeft.days ?? 0}d:${timeLeft.hours ?? 0}:${timeLeft.minutes ?? 0}:${timeLeft.seconds ?? 0}`;
+
 
   return (
-    <span className="text-sm font-medium">
-      {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-    </span>
+    <div
+      className={`${small ? "text-2xl" : "text-4xl sm:text-5xl lg:text-6xl"
+        } font-light tracking-tight`}
+    >
+      {format}
+    </div>
   );
 };
 

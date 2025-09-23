@@ -10,16 +10,12 @@ import NewsGrid from "@/components/NewsGrid";
 
 export default function Home() {
   return (
-
-    <div className="min-h-screen  text-white selection:bg-cyan-500/30 selection:text-white">
-      <BackgroundLayer />
-      <Navbar />
+    <>
       <Hero />
       <NewsGrid />
       <MissionAnalytics />
       <Apod />
       <CTA />
-      <Footer />
-    </div>
+    </>
   );
 }
