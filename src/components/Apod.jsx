@@ -1,6 +1,8 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import { Image as LucideImage, Download, Telescope, Moon, Radio, Sun, ChevronRight } from 'lucide-react';
+import { useApod } from '@/hooks/nasa/useApod';
 
 const quickBites = [
     {
@@ -25,7 +27,17 @@ const quickBites = [
     },
 ];
 
+
 const Apod = () => {
+
+      const { data, isLoading, isError } = useApod();
+        if (isLoading) return <div>Loading...</div>;
+        if (isError) return <div>Error loading APOD</div>;
+        console.log(data);
+        
+
+
+
     return (
         <section className="py-20">
             <div className="max-w-7xl mx-auto px-4">
