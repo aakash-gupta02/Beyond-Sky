@@ -92,7 +92,7 @@ const NewsGrid = () => {
                                     alt={item.alt}
                                     width={800}
                                     height={192}
-                                    className="h-48 w-full object-cover"
+                                    className="h-auto w-full object-cover"
                                     priority
                                 />
                                 <div className="absolute top-3 left-3 text-[10px] px-2 py-1 rounded-full bg-black/50 border border-white/10">

@@ -1,18 +1,38 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
+      // Unsplash
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        // Optionally, you can specify a port or pathname for more granular control
-        // port: '',
-        // pathname: '/photo-**',
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      // NASA APOD
+      {
+        protocol: "https",
+        hostname: "apod.nasa.gov",
+      },
+      // NASA EPIC
+      {
+        protocol: "https",
+        hostname: "epic.gsfc.nasa.gov",
+      },
+      // NASA Mars Rover
+      {
+        protocol: "https",
+        hostname: "mars.nasa.gov",
+      },
+      // Space Devs Launch Library
+      {
+        protocol: "https",
+        hostname: "thespacedevs-prod.nyc3.digitaloceanspaces.com",
+      },
+      // Any other NASA archives
+      {
+        protocol: "https",
+        hostname: "api.nasa.gov",
       },
     ],
-    // Optional: Specify modern image formats for automatic conversion
-    // formats: ['image/webp', 'image/avif'],
   },
 };
 

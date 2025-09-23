@@ -62,7 +62,7 @@ const Hero = () => {
                                 alt="Earth from space"
                                 width={1600}
                                 height={380}
-                                className="w-full h-[380px] object-cover"
+                                className="w-full h-auto object-cover"
                                 priority
                             />
                             <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
