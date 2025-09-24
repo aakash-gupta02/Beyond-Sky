@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react'
 
 const Navbar = () => {
   const [menuOpen, setmenuOpen] = useState(false)
-  
+
 
   return (
     //   <!-- Header -->
@@ -29,7 +29,9 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-2">
             <button className="px-4 py-2 text-sm text-white/80 hover:text-white transition-colors">Sign In</button>
-            <button className="px-4 py-2 text-sm bg-white text-black rounded-full hover:bg-white/90 transition-all">Subscribe</button>
+            <button 
+            className="px-4 py-2 text-sm bg-white text-black rounded-full hover:bg-white/90 transition-all">
+              Subscribe</button>
           </div>
 
           <button
@@ -44,28 +46,28 @@ const Navbar = () => {
 
         {menuOpen &&
 
-            <div id="mobileMenu" className="md:hidden mt-2 ">
-          <div className="bg-white/5 border border-white/10 rounded-2xl px-4 py-3 backdrop-blur-xl">
+          <div id="mobileMenu" className="md:hidden mt-2 ">
+            <div className="bg-white/5 border border-white/10 rounded-2xl px-4 py-3 backdrop-blur-xl">
 
-    
-            <div className="grid gap-2 text-sm">
-              <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">News</a>
-              <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Missions</a>
-              <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Launches</a>
-              <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Images</a>
-              <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Videos</a>
-              <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Resources</a>
-            </div>
-            <div className="flex gap-2 pt-3 mt-3 border-t border-white/10">
-              <button className="w-full px-4 py-2 text-sm bg-white text-black rounded-full hover:bg-white/90 transition-all">Subscribe</button>
-              <button className="w-full px-4 py-2 text-sm rounded-full border border-white/15 hover:bg-white/10">Sign In</button>
+
+              <div className="grid gap-2 text-sm">
+                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">News</a>
+                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Missions</a>
+                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Launches</a>
+                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Images</a>
+                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Videos</a>
+                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Resources</a>
+              </div>
+              <div className="flex gap-2 pt-3 mt-3 border-t border-white/10">
+                <button className="w-full px-4 py-2 text-sm bg-white text-black rounded-full hover:bg-white/90 transition-all">Subscribe</button>
+                <button className="w-full px-4 py-2 text-sm rounded-full border border-white/15 hover:bg-white/10">Sign In</button>
+              </div>
             </div>
           </div>
-        </div>
 
 
         }
-    
+
 
       </div>
     </header>)

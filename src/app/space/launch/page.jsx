@@ -20,9 +20,6 @@ const LaunchPage = () => {
   if (isLoading) return <div>Loading Launches...</div>;
   if (isError) return <div>Failed to load launches</div>;
 
-  console.log("selectedLaunch", selectedLaunch);
-  console.log("launches", launches.data[0]);
-  
   // Render only after selectedLaunch exists
   if (!selectedLaunch) return null;
   
@@ -33,6 +30,8 @@ return (
             <div className="flex flex-col lg:flex-row gap-10">
                 {/* Main launch detail */}
                 <div className="flex-1 min-w-0">
+
+                    {/* image*/}
                     <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5">
                         <Image
                             src={
@@ -88,7 +87,7 @@ return (
                         </div>
 
                         {/* Stats */}
-                        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div className="mt-10 grid grid-cols-2 lg:grid-cols-2 gap-4">
                             <div className="rounded-2xl bg-white/5 border border-white/10 p-4 lg:p-6">
                                 <div className="text-xs text-white/50">Next Launch</div>
                                 <div className="mt-2 text-2xl font-light tracking-tight">

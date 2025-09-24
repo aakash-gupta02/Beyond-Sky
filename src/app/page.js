@@ -11,6 +11,7 @@ import NewsGrid from "@/components/NewsGrid";
 export default function Home() {
   return (
     <>
+    <Navbar />
       <Hero />
       <NewsGrid />
       <MissionAnalytics />

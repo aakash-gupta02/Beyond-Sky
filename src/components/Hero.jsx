@@ -4,9 +4,12 @@ import Image from 'next/image';
 import { Rocket, Rss } from 'lucide-react';
 import { useLaunch } from '@/hooks/nasa/useLaunch';
 import Countdown from './launch/Countdown';
+import { redirect } from 'next/navigation';
+import Link from 'next/link';
 
 const Hero = () => {
     const { data, isLoading, isError } = useLaunch();
+
 
     if (isLoading) return <div>Loading Launches...</div>;
     console.log(isError);
@@ -52,9 +55,13 @@ const Hero = () => {
                                     <Rocket className="w-5 h-5" />
                                     View Launch Location
                                 </a>
-                                <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition-all">
+                                <Link
+                                href={"/space/launch"}
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition-all">
+
                                     <Rss className="w-5 h-5" />
-View Full Launch                                </button>
+                                    View Full Launch
+                                </Link>
                             </div>
                         </div>
 

@@ -4,6 +4,7 @@ import Providers from "./providers";
 import BackgroundLayer from "@/components/BackgroundLayer";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import NavBar from "@/components/pageCompo/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,13 +27,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       ><Providers>
-        
-    <div className="min-h-screen  text-white selection:bg-cyan-500/30 selection:text-white">
-      <BackgroundLayer />
-      <Navbar />
 
-          {children}
-          <Footer />
+          <div className="min-h-screen  text-white selection:bg-cyan-500/30 selection:text-white">
+            <BackgroundLayer />
+            {children}
+            <Footer />
           </div>
         </Providers>
       </body>
