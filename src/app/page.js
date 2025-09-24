@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Countdown from "@/components/launch/Countdown";
 import MissionAnalytics from "@/components/MissionAnalytics";
 import Navbar from "@/components/Navbar";
+import NeoWidget from "@/components/Neow";
 import NewsGrid from "@/components/NewsGrid";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <Navbar />
       <Hero />
       <NewsGrid />
+      <NeoWidget/>
       <MissionAnalytics />
       <Apod />
       <CTA />
