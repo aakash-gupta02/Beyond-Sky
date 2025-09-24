@@ -6,20 +6,17 @@ import { useLaunch } from '@/hooks/nasa/useLaunch';
 import Countdown from './launch/Countdown';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
+import HeroSkeleton from './skeletons/HeroSkeleton';
 
 const Hero = () => {
     const { data, isLoading, isError } = useLaunch();
 
 
-    if (isLoading) return <div>Loading Launches...</div>;
-    console.log(isError);
-    console.log(data);
+    if (isLoading) return <HeroSkeleton />;
+
     if (isError || !data) return <div>Failed to load launches</div>;
 
-
-    const launch = data.data[0];
-    console.log("launch", launch);
-
+    const launch = data.data[1];
 
     return (
         <section className="pt-40">
