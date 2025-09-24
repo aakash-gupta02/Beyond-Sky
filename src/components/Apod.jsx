@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Image as LucideImage, Download, Telescope, Moon, Radio, Sun, ChevronRight } from "lucide-react";
 import { useApod } from "@/hooks/nasa/useApod";
 import MediaCard from "./MediaCard";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const quickBites = [
   { icon: <Telescope className="w-5 h-5" />, title: "Hubble returns to normal operations", desc: "Science observations resume after safe mode" },
@@ -20,14 +22,16 @@ const Apod = () => {
   if (isError || !data) return <div className="text-center py-20">Error loading APOD</div>;
 
     const buttons = [
-    <button
+    <Link
       key="view"
+      href="/space/apod"
       className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-black hover:bg-white/90 transition-colors"
     >
       <LucideImage className="w-4 h-4" />
       View Full
-    </button>,
+    </Link>,
     <button
+    
       key="download"
       className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/15 hover:bg-white/10 transition-colors"
     >
