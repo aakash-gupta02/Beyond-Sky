@@ -16,7 +16,7 @@ const Hero = () => {
 
     if (isError || !data) return <div>Failed to load launches</div>;
 
-    const launch = data.data[1];
+    const launch = data.data[0];
 
     return (
         <section className="pt-40">

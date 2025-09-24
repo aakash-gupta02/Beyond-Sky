@@ -32,6 +32,12 @@ const nextConfig = {
         protocol: "https",
         hostname: "api.nasa.gov",
       },
+      // Proxy service
+      {
+        protocol: "https",
+        hostname: "wsrv.nl",
+      },
+
     ],
   },
 };
