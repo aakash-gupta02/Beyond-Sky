@@ -6,20 +6,20 @@ A modern web application that brings NASA's data to life with real-time space in
 ## 📸 Screenshots
 
 ### Main Dashboard
-![NASA Space Explorer - Main Dashboard](screenshots/main-dashboard.png)
-*The main dashboard featuring live launch countdowns, astronomy picture of the day, and quick access to all space data*
+[![beyond-sky-vercel-app-2.png](https://i.postimg.cc/J4gQSC77/beyond-sky-vercel-app-2.png)](https://postimg.cc/Yh6gmVmT)
+
 
 ### Mars Rover Photos
-![Mars Rover Gallery](screenshots/mars-rover.png)
-*Browse through the latest images captured by NASA's Mars rovers with detailed metadata*
+[![Screenshot-2025-09-25-232205.png](https://i.postimg.cc/j21zVyb3/Screenshot-2025-09-25-232205.png)](https://postimg.cc/8fhFMJsL)
 
 ### Near-Earth Objects Tracking
-![NEO Tracking Dashboard](screenshots/neo-tracking.png)
-*Real-time monitoring of Near-Earth Objects with hazard classifications and orbital data*
+[![Screenshot-2025-09-25-232110.png](https://i.postimg.cc/qv3GTDgs/Screenshot-2025-09-25-232110.png)](https://postimg.cc/RWvt1R7h)
 
 ### Space News Feed
-![Space News](screenshots/space-news.png)
-*Stay updated with the latest space news and mission updates from NASA*
+[![Screenshot-2025-09-25-232205.png](https://i.postimg.cc/j21zVyb3/Screenshot-2025-09-25-232205.png)](https://postimg.cc/8fhFMJsL)
+
+### Astronomy Picture of the Day - APOD
+[![Screenshot-2025-09-25-232033.png](https://i.postimg.cc/LskBqqth/Screenshot-2025-09-25-232033.png)](https://postimg.cc/7C6TdZQy)
 
 ## ✨ Features
 
@@ -31,7 +31,7 @@ A modern web application that brings NASA's data to life with real-time space in
 - **Space News Feed** - Curated space news and mission updates
 
 ### 🛠 Technical Features
-- **Modern React Architecture** - Built with Next.js 14 and React 18
+- **Modern React Architecture** - Built with Next.js 15 and React 19
 - **Real-time Data** - Powered by NASA's official APIs
 - **Responsive Design** - Optimized for all devices and screen sizes
 - **Fast Performance** - Server-side rendering and optimized caching
