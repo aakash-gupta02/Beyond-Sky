@@ -10,7 +10,7 @@ const NeoSection = () => {
 
 
     return (
-        <section id="data" className="py-20">
+        <section id="data" className="">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="flex items-end justify-between">

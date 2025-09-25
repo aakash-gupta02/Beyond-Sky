@@ -16,6 +16,7 @@ import {
 } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import NeoSkeleton from "../skeletons/NeoSkeleton";
+import Link from "next/link";
 
 // Register ChartJS components
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -119,12 +120,10 @@ const NeoStats = ({ data, isLoading, isError }) => {
     };
 
     return (
-
-
-        <div className="mt-8 grid lg:grid-cols-2 gap-6">
+        <div className="mt-8 grid gap-6 lg:grid-cols-2 w-full max-w-full overflow-x-auto px-2 sm:px-4">
             {/* Chart Card */}
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                <div className="flex items-center justify-between">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 min-w-[320px]">
+                <div className="flex items-center justify-between flex-wrap gap-2">
                     <div className="flex items-center gap-3">
                         <div className="h-10 w-10 rounded-lg bg-indigo-500/10 border border-indigo-300/20 flex items-center justify-center">
                             <Radar className="w-5 h-5 text-indigo-300" />
@@ -167,7 +166,7 @@ const NeoStats = ({ data, isLoading, isError }) => {
             </div>
 
             {/* Fastest Approaches List */}
-            <div className="rounded-3xl border border-white/10 bg-white/5 overflow-hidden">
+            <div className="rounded-3xl border border-white/10 bg-white/5 overflow-hidden min-w-[320px]">
                 <div className="p-6 border-b border-white/10">
                     <h3 className="text-xl font-semibold tracking-tight text-white">Fastest Approaches</h3>
                     <p className="text-white/60 text-sm mt-1">Top 5 by relative velocity</p>
@@ -210,14 +209,16 @@ const NeoStats = ({ data, isLoading, isError }) => {
                 </div>
 
                 <div className="p-5 border-t border-white/10">
-                    <button className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-white/15 hover:bg-white/10 transition-colors text-sm text-white">
+                    <Link
+                        href="/space/neow"
+                        className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-white/15 hover:bg-white/10 transition-colors text-sm text-white"
+                    >
                         View Full NEO List
                         <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
-
     );
 };
 
