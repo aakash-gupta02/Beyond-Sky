@@ -18,7 +18,16 @@ export async function GET() {
       `https://api.nasa.gov/EPIC/api/natural/date/${today}?api_key=${process.env.NASA_API_KEY}`
     );
 
-    let metadata = await response.json();
+    let metadata;
+    if (response.ok) {
+      metadata = await response.json();
+    } else {
+      console.log("EPIC API upstream error:", await response.text());
+      return new Response(
+        JSON.stringify({ success: false, error: "Upstream NASA API error" }),
+        { status: 502, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
     // If empty → fallback to most recent images
     if (!metadata || metadata.length === 0) {
@@ -57,6 +66,8 @@ export async function GET() {
       { status: 200, headers: { "Content-Type": "application/json" } }
     );
   } catch (err) {
+    console.log("EPIC API Error:", err);
+    
     return new Response(
       JSON.stringify({ success: false, error: err.message }),
       { status: 500, headers: { "Content-Type": "application/json" } }

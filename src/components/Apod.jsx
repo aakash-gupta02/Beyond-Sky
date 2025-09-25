@@ -21,7 +21,7 @@ const Apod = () => {
   if (isLoading) return <div className="text-center py-20">Loading APOD...</div>;
   if (isError || !data) return <div className="text-center py-20">Error loading APOD</div>;
 
-    const buttons = [
+  const buttons = [
     <Link
       key="view"
       href="/space/apod"
@@ -31,7 +31,7 @@ const Apod = () => {
       View Full
     </Link>,
     <button
-    
+
       key="download"
       className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/15 hover:bg-white/10 transition-colors"
     >
@@ -46,10 +46,10 @@ const Apod = () => {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-6">
-          {/* APOD Card */}
+        {/* <div className="grid lg:grid-cols-2 gap-6"> */}
+        {/* APOD Card */}
 
-          {/* <div className="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
+        {/* <div className="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
             <div className="relative w-full h-[400px] lg:h-[500px]">
               {data.media_type === "image" ? (
                 <Image
@@ -95,18 +95,18 @@ const Apod = () => {
             </div>
           </div> */}
 
-    <MediaCard
-      title={data.title}
-      description={data.explanation}
-      mediaUrl={data.url}
-      mediaType="image"
-      date="APOD"
-      buttons={buttons}
-    />
+        <MediaCard
+          title={data.title}
+          description={data.explanation}
+          mediaUrl={data.url}
+          mediaType="image"
+          date="APOD"
+          buttons={buttons}
+        />
 
 
-          {/* Quick Bites */}
-          {/* <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+        {/* Quick Bites */}
+        {/* <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
             <h3 className="text-2xl font-light tracking-tight">Quick Bites</h3>
             <div className="mt-4 space-y-4">
               {quickBites.map((bite, idx) => (
@@ -126,7 +126,7 @@ const Apod = () => {
               ))}
             </div>
           </div> */}
-        </div>
+        {/* </div> */}
       </div>
     </section>
   );
