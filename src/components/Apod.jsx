@@ -106,7 +106,7 @@ const Apod = () => {
 
 
           {/* Quick Bites */}
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+          {/* <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
             <h3 className="text-2xl font-light tracking-tight">Quick Bites</h3>
             <div className="mt-4 space-y-4">
               {quickBites.map((bite, idx) => (
@@ -125,7 +125,7 @@ const Apod = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

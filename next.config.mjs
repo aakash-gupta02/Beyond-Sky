@@ -19,6 +19,11 @@ const nextConfig = {
       },
       // NASA Mars Rover
       {
+        protocol: "http",
+        hostname: "mars.jpl.nasa.gov",
+      },
+      // NASA Mars Rover
+      {
         protocol: "https",
         hostname: "mars.nasa.gov",
       },

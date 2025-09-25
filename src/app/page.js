@@ -4,6 +4,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Countdown from "@/components/launch/Countdown";
+import Mars from "@/components/Mars";
 import MissionAnalytics from "@/components/MissionAnalytics";
 import Navbar from "@/components/Navbar";
 import NeoWidget from "@/components/Neow";
@@ -17,6 +18,7 @@ export default function Home() {
       <NewsGrid />
       <NeoWidget/>
       {/* <MissionAnalytics /> */}
+      <Mars />
       <Apod />
       <CTA />
     </>
