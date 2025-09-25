@@ -6,6 +6,7 @@ import { useApod } from "@/hooks/nasa/useApod";
 import MediaCard from "./MediaCard";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import TitleHeader from "./TitleHeader";
 
 const quickBites = [
   { icon: <Telescope className="w-5 h-5" />, title: "Hubble returns to normal operations", desc: "Science observations resume after safe mode" },
@@ -17,6 +18,9 @@ const quickBites = [
 const Apod = () => {
   const { data, isLoading, isError } = useApod();
   const [showFullDesc, setShowFullDesc] = useState(false);
+
+  console.log(data);
+
 
   if (isLoading) return <div className="text-center py-20">Loading APOD...</div>;
   if (isError || !data) return <div className="text-center py-20">Error loading APOD</div>;
@@ -46,54 +50,21 @@ const Apod = () => {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4">
-        {/* <div className="grid lg:grid-cols-2 gap-6"> */}
-        {/* APOD Card */}
 
-        {/* <div className="rounded-3xl overflow-hidden border border-white/10 bg-white/5">
-            <div className="relative w-full h-[400px] lg:h-[500px]">
-              {data.media_type === "image" ? (
-                <Image
-                  src={data.url}
-                  alt={data.title}
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              ) : (
-                <iframe
-                  src={data.url}
-                  title={data.title}
-                  className="w-full h-full"
-                  allowFullScreen
-                />
-              )}
-              <div className="absolute top-4 left-4 text-xs px-3 py-1 rounded-full bg-black/60 border border-white/10">
-                APOD
-              </div>
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-light tracking-tight">{data.title}</h3>
-              <p className={`text-sm text-gray-300 mt-2 ${!showFullDesc ? "line-clamp-4" : ""}`}>
-                {data.explanation}
-              </p>
-              {data.explanation.length > 250 && (
-                <button
-                  className="mt-2 text-xs text-blue-400 hover:underline"
-                  onClick={toggleDesc}
-                >
-                  {showFullDesc ? "Show Less" : "Read More"}
-                </button>
-              )}
-              <div className="mt-4 flex gap-2 flex-wrap">
-                <button className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-black hover:bg-white/90 transition-colors">
-                  <LucideImage className="w-4 h-4" /> View Full
-                </button>
-                <button className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/15 hover:bg-white/10 transition-colors">
-                  <Download className="w-4 h-4" /> Download
-                </button>
-              </div>
-            </div>
-          </div> */}
+        {/* Header */}
+        <div className="mb-10">
+
+          <TitleHeader
+            heading="Astronomy Picture of the Day"
+            subheading="A stunning image from NASA's archives."
+            cache={data.cached}
+
+          />
+        </div>
+
+
+
+
 
         <MediaCard
           title={data.title}

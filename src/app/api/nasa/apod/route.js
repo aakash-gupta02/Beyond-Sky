@@ -12,7 +12,7 @@ export async function GET() {
     // ✅ If we already fetched today's data → return from cache
     if (cachedData && cachedDate === today) {
       return NextResponse.json({
-        source: "cache",
+        cached: true,
         ...cachedData,
       });
     }
@@ -31,7 +31,7 @@ export async function GET() {
     cachedDate = today;
 
     return NextResponse.json({
-      source: "api",
+      cached: false,
       ...data,
     });
 

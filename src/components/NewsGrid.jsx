@@ -6,6 +6,7 @@ import { useNews } from "@/hooks/nasa/useNews";
 import { proxyImage } from "@/utilis/proxyImage";
 import NewsSkeleton from "./skeletons/NewsSkeleton";
 import Link from "next/link";
+import TitleHeader from "./TitleHeader";
 
 const NewsGrid = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -20,18 +21,9 @@ const NewsGrid = () => {
         <section className="py-20 flex items-center justify-center min-h-screen">
             <div className="max-w-7xl mx-auto px-4 w-full">
                 {/* Header */}
-                <div className="flex items-end justify-between">
-                    <div>
-                        <h2
-                            className="text-3xl sm:text-4xl font-light tracking-tight"
-                            style={{ letterSpacing: "-0.01em" }}
-                        >
-                            Top Stories
-                        </h2>
-                        <p className="text-white/60 mt-2">
-                            Daily coverage from NASA and international space agencies.
-                        </p>
-                    </div>
+                <div className="*:mb-8">
+        
+                    <TitleHeader heading={"Top Stories"} subheading={"Daily coverage from NASA and international space agencies."} cache={data?.fromCache} />
                 </div>
 
                 {/* News Grid */}

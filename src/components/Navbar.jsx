@@ -1,10 +1,13 @@
 "use client"
 import React, { useState } from 'react'
 import Logo from './Logo'
-import { Menu, X } from 'lucide-react'
+import { Github, Menu, X } from 'lucide-react'
 
-const Navbar = () => {
+const Navbar = ({ onNavClick }) => {
   const [menuOpen, setmenuOpen] = useState(false)
+  const scrollTo = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
 
   return (
@@ -15,23 +18,42 @@ const Navbar = () => {
           <div className="flex items-center gap-3 pl-1">
 
             <Logo />
-            <span className="hidden md:inline-flex text-xs px-2 py-1 rounded-full border border-cyan-400/25 text-cyan-300/90 bg-cyan-400/10">Live Feeds</span>
+            <span className="inline-flex items-center text-sm sm:text-sm px-2 py-1 sm:px-2 sm:py-1 rounded-full border border-cyan-400/25 text-cyan-300/90 bg-cyan-400/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse mr-1.5"></span>
+              Live Feeds
+            </span>
           </div>
 
           <nav className="hidden md:flex items-center gap-7 text-sm">
-            <a href="#" className="text-white/70 hover:text-white transition-colors">News</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors">Missions</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors">Launches</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors">Images</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors">Videos</a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors">Resources</a>
+            <button
+              onClick={onNavClick.hero}
+
+              className="text-white/70 hover:text-white transition-colors">Launch</button>
+            <button
+              onClick={onNavClick.news}
+
+              className="text-white/70 hover:text-white transition-colors">News</button>
+            <button
+              onClick={onNavClick.neo}
+
+              className="text-white/70 hover:text-white transition-colors">NEOW</button>
+            <button
+              onClick={onNavClick.mars}
+
+              className="text-white/70 hover:text-white transition-colors">Mars</button>
+            <button
+              onClick={onNavClick.apod}
+
+              className="text-white/70 hover:text-white transition-colors">APOD</button>
           </nav>
 
           <div className="hidden md:flex items-center gap-2">
-            <button className="px-4 py-2 text-sm text-white/80 hover:text-white transition-colors">Sign In</button>
-            <button 
-            className="px-4 py-2 text-sm bg-white text-black rounded-full hover:bg-white/90 transition-all">
-              Subscribe</button>
+            {/* <button className="px-4 py-2 text-sm text-white/80 hover:text-white transition-colors">Sign In</button> */}
+            <button
+            onClick={() => window.open('https://github.com/aakash-gupta02/Beyond-Sky')}
+              className="px-4 py-2 text-sm bg-white text-black rounded-full hover:bg-white/90 transition-all">
+                <Github className="w-4 h-4 inline-block mr-2" />
+              Github</button>
           </div>
 
           <button
@@ -45,27 +67,32 @@ const Navbar = () => {
         {/* <!-- Mobile Menu --> */}
 
         {menuOpen &&
-
           <div id="mobileMenu" className="md:hidden mt-2 ">
             <div className="bg-white/5 border border-white/10 rounded-2xl px-4 py-3 backdrop-blur-xl">
 
 
               <div className="grid gap-2 text-sm">
-                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">News</a>
-                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Missions</a>
-                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Launches</a>
-                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Images</a>
-                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Videos</a>
-                <a href="#" className="px-3 py-2 rounded-lg hover:bg-white/10">Resources</a>
+              
+                <button onClick={onNavClick.hero} className="px-3 py-2 rounded-lg hover:bg-white/10">Launches</button>
+
+
+                <button onClick={onNavClick.news} className="px-3 py-2 rounded-lg hover:bg-white/10">News</button>
+
+                <button onClick={onNavClick.neo} className="px-3 py-2 rounded-lg hover:bg-white/10">NEOW</button>
+                <button onClick={onNavClick.mars} className="px-3 py-2 rounded-lg hover:bg-white/10">Mars</button>
+                <button onClick={onNavClick.apod} className="px-3 py-2 rounded-lg hover:bg-white/10">APOD</button>
+             
               </div>
               <div className="flex gap-2 pt-3 mt-3 border-t border-white/10">
-                <button className="w-full px-4 py-2 text-sm bg-white text-black rounded-full hover:bg-white/90 transition-all">Subscribe</button>
-                <button className="w-full px-4 py-2 text-sm rounded-full border border-white/15 hover:bg-white/10">Sign In</button>
+                <button
+                  onClick={() => window.open('https://github.com/aakash-gupta02/Beyond-Sky')}
+                  className="w-full px-4 py-2 text-sm bg-white text-black rounded-full hover:bg-white/90 transition-all">
+                    <Github className="w-4 h-4 inline-block mr-2" />
+                    Github</button>
+                {/* <button className="w-full px-4 py-2 text-sm rounded-full border border-white/15 hover:bg-white/10">Sign In</button> */}
               </div>
             </div>
           </div>
-
-
         }
 
 
