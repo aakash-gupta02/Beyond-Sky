@@ -1,36 +1,191 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀Beyond Sky!! - NASA Space Explorer
 
-## Getting Started
 
-First, run the development server:
+A modern web application that brings NASA's data to life with real-time space information, stunning imagery, and comprehensive space mission tracking.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📸 Screenshots
+
+### Main Dashboard
+![NASA Space Explorer - Main Dashboard](screenshots/main-dashboard.png)
+*The main dashboard featuring live launch countdowns, astronomy picture of the day, and quick access to all space data*
+
+### Mars Rover Photos
+![Mars Rover Gallery](screenshots/mars-rover.png)
+*Browse through the latest images captured by NASA's Mars rovers with detailed metadata*
+
+### Near-Earth Objects Tracking
+![NEO Tracking Dashboard](screenshots/neo-tracking.png)
+*Real-time monitoring of Near-Earth Objects with hazard classifications and orbital data*
+
+### Space News Feed
+![Space News](screenshots/space-news.png)
+*Stay updated with the latest space news and mission updates from NASA*
+
+## ✨ Features
+
+### 🌟 Core Features
+- **Real-time Launch Tracking** - Live countdowns and mission details
+- **Astronomy Picture of the Day** - Daily stunning space imagery with detailed explanations
+- **Mars Rover Photos** - Latest images from NASA's Mars exploration missions
+- **Near-Earth Objects Monitoring** - Track potentially hazardous asteroids and comets
+- **Space News Feed** - Curated space news and mission updates
+
+### 🛠 Technical Features
+- **Modern React Architecture** - Built with Next.js 14 and React 18
+- **Real-time Data** - Powered by NASA's official APIs
+- **Responsive Design** - Optimized for all devices and screen sizes
+- **Fast Performance** - Server-side rendering and optimized caching
+- **Data Persistence** - Smart caching with React Query for smooth UX
+
+## 🏗 Built With
+
+- **[Next.js 14](https://nextjs.org/)** - React framework for production
+- **[React 18](https://reactjs.org/)** - UI library
+- **[TanStack Query](https://tanstack.com/query/latest)** - Data fetching and caching
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Lucide React](https://lucide.dev/)** - Beautiful icons
+- **[NASA APIs](https://api.nasa.gov/)** - Official NASA data sources
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   │   └── nasa/         # NASA API endpoints
+│   └── space/            # Space-related pages
+├── components/            # Reusable UI components
+│   ├── launch/           # Launch-specific components
+│   ├── pageCompo/        # Page-specific components
+│   └── skeletons/        # Loading skeletons
+├── hooks/                # Custom React hooks
+│   └── nasa/            # NASA API hooks
+└── utils/               # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+ installed
+- NASA API key (free from [api.nasa.gov](https://api.nasa.gov/))
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/nasa-space-explorer.git
+   cd nasa-space-explorer
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Add your NASA API key to `.env.local`:
+   ```
+   NASA_API_KEY=your_api_key_here
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
+
+## 🛡 API Integration
+
+The app integrates with multiple NASA APIs:
+
+- **APOD API** - Astronomy Picture of the Day
+- **Mars Rover Photos API** - Images from Mars rovers
+- **NeoWs API** - Near Earth Object Web Service
+- **Launch API** - Upcoming space launches
+- **News API** - Space-related news
+
+## 🎨 Custom Hooks
+
+### NASA Data Hooks
+- `useApod()` - Fetch astronomy picture of the day
+- `useLaunch()` - Get upcoming space launches
+- `useMars(page)` - Fetch Mars rover photos with pagination
+- `useNeow()` - Track near-Earth objects
+- `useNews(page, pageSize)` - Get paginated space news
+
+## 🎯 Key Components
+
+- **Hero Component** - Main landing section with live launch countdown
+- **APOD Component** - Daily astronomy picture showcase
+- **Mars Grid** - Interactive Mars rover photo gallery
+- **NEO Tracker** - Real-time asteroid monitoring dashboard
+- **News Grid** - Paginated space news feed
+
+## 📱 Responsive Design
+
+The application is fully responsive and optimized for:
+- 📱 Mobile devices (320px+)
+- 📱 Tablets (768px+)
+- 💻 Desktops (1024px+)
+- 🖥 Large screens (1440px+)
+
+## ⚡ Performance Features
+
+- **Server-Side Rendering** - Fast initial page loads
+- **Image Optimization** - Automatic image compression and lazy loading
+- **Data Caching** - Smart caching with 1-hour stale time
+- **Code Splitting** - Optimized bundle sizes
+- **Progressive Enhancement** - Works without JavaScript
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- **NASA** for providing amazing APIs and data
+- **Next.js team** for the incredible framework
+- **TanStack** for the excellent Query library
+- **Tailwind CSS** for the utility-first CSS framework
+
+## 🐛 Known Issues
+
+- Some Mars rover images may load slowly due to NASA's CDN
+- NEO data updates hourly, not in real-time
+- Mobile landscape orientation may need scroll adjustments
+
+## 📞 Support
+
+If you have any questions or run into issues:
+- Create an [issue](https://github.com/yourusername/nasa-space-explorer/issues)
+- Check the [NASA API documentation](https://api.nasa.gov/)
+- Review the [Next.js documentation](https://nextjs.org/docs)
+
+---
+
+**Made with ❤️ and curiosity about the cosmos**
+
+*Explore the universe from your browser* 🌌
